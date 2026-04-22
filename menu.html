@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#08510a">
+  <link rel="shortcut icon" href="img/ui/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+  <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="css/plugins/swiper.min.css">
+  <link rel="stylesheet" href="css/plugins/datepicker.css">
+  <link href="css/plugins/mapbox-style.css" rel='stylesheet'>
+  <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/brand.css">
+  <title>Menu | Toasty Turtle Cafe</title>
+</head>
+
+<body>
+  <div class="sb-app">
+
+    <div class="sb-preloader">
+      <div class="sb-preloader-bg"></div>
+      <div class="sb-preloader-body">
+        <div class="sb-loading">
+          <div class="sb-percent"><span class="sb-preloader-number" data-count="101">00</span><span>%</span></div>
+        </div>
+        <div class="sb-loading-bar">
+          <div class="sb-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sb-click-effect"></div>
+    <div class="sb-load"></div>
+
+    <div class="sb-top-bar-frame">
+      <div class="sb-top-bar-bg"></div>
+      <div class="container">
+        <div class="sb-top-bar">
+          <a href="index.html" class="sb-logo-frame">
+            <img src="img/ui/logo.png" alt="Toasty Turtle Cafe">
+          </a>
+          <div class="sb-right-side">
+            <nav id="sb-dynamic-menu" class="sb-menu-transition">
+              <ul class="sb-navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li class="sb-has-children">
+                  <a href="#.">More</a>
+                  <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="sb-buttons-frame">
+              <div class="sb-menu-btn"><span></span></div>
+              <div class="sb-info-btn"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sb-info-bar">
+        <div class="sb-infobar-content">
+          <div class="sb-ib-title-frame sb-mb-30">
+            <h4>Find Us</h4><i class="fas fa-arrow-down"></i>
+          </div>
+          <ul class="sb-list sb-mb-30">
+            <li><b>Address:</b><span>Berlin, Germany</span></li>
+            <li><b>Mon – Fri:</b><span>08:00 – 22:00</span></li>
+            <li><b>Weekends:</b><span>09:00 – 23:00</span></li>
+            <li><b>Email:</b><span>hello@toastyturtle.de</span></li>
+          </ul>
+          <div class="sb-ib-title-frame sb-mb-30">
+            <h4>Follow Us</h4><i class="fas fa-arrow-down"></i>
+          </div>
+          <ul class="sb-instagram sb-mb-30">
+            <li><a href="#." data-no-swup><img src="img/instagram/1.jpg" alt="instagram"></a></li>
+            <li><a href="#." data-no-swup><img src="img/instagram/2.jpg" alt="instagram"></a></li>
+            <li><a href="#." data-no-swup><img src="img/instagram/3.jpg" alt="instagram"></a></li>
+            <li><a href="#." data-no-swup><img src="img/instagram/4.jpg" alt="instagram"></a></li>
+            <li><a href="#." data-no-swup><img src="img/instagram/5.jpg" alt="instagram"></a></li>
+            <li><a href="#." data-no-swup><img src="img/instagram/6.jpg" alt="instagram"></a></li>
+          </ul>
+          <hr>
+          <div class="sb-ib-title-frame sb-mb-30">
+            <h4>Latest Posts</h4><i class="fas fa-arrow-down"></i>
+          </div>
+          <a href="publication.html" class="sb-blog-card sb-blog-card-sm sb-mb-30">
+            <div class="sb-cover-frame"><img src="img/blog/1.jpg" alt="cover"></div>
+            <div class="sb-blog-card-descr">
+              <h5 class="sb-mb-5">The Art of the Perfect Avocado Toast</h5>
+              <p class="sb-text sb-text-sm">Simple, seasonal, and full of flavour.</p>
+            </div>
+          </a>
+          <a href="publication.html" class="sb-blog-card sb-blog-card-sm sb-mb-30">
+            <div class="sb-cover-frame"><img src="img/blog/2.jpg" alt="cover"></div>
+            <div class="sb-blog-card-descr">
+              <h5 class="sb-mb-5">Morning Rituals: Coffee at Toasty Turtle</h5>
+              <p class="sb-text sb-text-sm">Why we take our coffee seriously.</p>
+            </div>
+          </a>
+        </div>
+        <div class="sb-info-bar-footer">
+          <ul class="sb-social">
+            <li><a href="#." data-no-swup><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#." data-no-swup><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#." data-no-swup><i class="fab fa-tiktok"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="sb-dynamic-content" class="sb-transition-fade">
+
+      <!-- banner -->
+      <section class="sb-banner sb-banner-sm sb-banner-color">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="sb-main-title-frame">
+                <div class="sb-main-title text-center">
+                  <span class="sb-suptitle sb-mb-30">Menu</span>
+                  <h1 class="sb-mb-30">Good food, <span>honestly</span> made.</h1>
+                  <p class="sb-text sb-text-lg sb-mb-30">Fresh ingredients. Thoughtful combinations. No rush.</p>
+                  <ul class="sb-breadcrumbs">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#.">Menu</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner end -->
+
+      <!-- menu section -->
+      <section class="sb-menu-section sb-p-90-60">
+        <div class="sb-bg-1">
+          <div></div>
+        </div>
+        <div class="container">
+          <div class="sb-filter mb-30">
+            <a href="#." data-filter="*" class="sb-filter-link sb-active">All</a>
+            <a href="#." data-filter=".breakfast" class="sb-filter-link">Breakfast</a>
+            <a href="#." data-filter=".lunch" class="sb-filter-link">Lunch</a>
+            <a href="#." data-filter=".drinks" class="sb-filter-link">Drinks</a>
+            <a href="#." data-filter=".desserts" class="sb-filter-link">Desserts</a>
+          </div>
+          <div class="sb-masonry-grid">
+            <div class="sb-grid-sizer"></div>
+
+            <div class="sb-grid-item sb-item-33 breakfast">
+              <a data-fancybox="menu" data-no-swup href="img/menu/1.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/1.jpg" alt="product"></div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Avocado Toast</h4>
+                  <div class="sb-price"><sub>€</sub> 9</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>sourdough</span>, <span>avocado</span>, <span>feta</span>,
+                    <span>chilli flakes</span>, <span>lemon</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 breakfast">
+              <a data-fancybox="menu" data-no-swup href="img/menu/2.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame">
+                  <img src="img/menu/2.jpg" alt="product">
+                  <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Vegan</div>
+                </div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Shakshuka Bowl</h4>
+                  <div class="sb-price"><sub>€</sub> 11</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>eggs</span>, <span>tomatoes</span>, <span>peppers</span>,
+                    <span>cumin</span>, <span>fresh herbs</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 breakfast">
+              <a data-fancybox="menu" data-no-swup href="img/menu/5.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame">
+                  <img src="img/menu/5.jpg" alt="product">
+                  <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Vegan</div>
+                </div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Banana Pancakes</h4>
+                  <div class="sb-price"><sub>€</sub> 8</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>banana</span>, <span>oats</span>, <span>maple syrup</span>,
+                    <span>berries</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 lunch">
+              <a data-fancybox="menu" data-no-swup href="img/menu/3.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame">
+                  <img src="img/menu/3.jpg" alt="product">
+                  <div class="sb-badge sb-hot"><i class="fas fa-pepper-hot"></i> Spicy</div>
+                </div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Kerala Curry</h4>
+                  <div class="sb-price"><sub>€</sub> 14</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>coconut milk</span>, <span>curry leaves</span>, <span>mustard
+                      seeds</span>, <span>ginger</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 lunch">
+              <a data-fancybox="menu" data-no-swup href="img/menu/7.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/7.jpg" alt="product"></div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Grilled Halloumi Wrap</h4>
+                  <div class="sb-price"><sub>€</sub> 12</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>halloumi</span>, <span>roasted peppers</span>,
+                    <span>tzatziki</span>, <span>rocket</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li class="sb-empty"><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 lunch">
+              <a data-fancybox="menu" data-no-swup href="img/menu/9.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame">
+                  <img src="img/menu/9.jpg" alt="product">
+                  <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Vegan</div>
+                </div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Roasted Veggie Bowl</h4>
+                  <div class="sb-price"><sub>€</sub> 13</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>quinoa</span>, <span>sweet potato</span>, <span>chickpeas</span>,
+                    <span>tahini</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 drinks">
+              <a data-fancybox="menu" data-no-swup href="img/menu/4.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/4.jpg" alt="product"></div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Cold Brew Latte</h4>
+                  <div class="sb-price"><sub>€</sub> 5</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>cold brew</span>, <span>oat milk</span>, <span>vanilla</span>,
+                    <span>ice</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 drinks">
+              <a data-fancybox="menu" data-no-swup href="img/menu/10.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame">
+                  <img src="img/menu/10.jpg" alt="product">
+                  <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Vegan</div>
+                </div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Matcha Latte</h4>
+                  <div class="sb-price"><sub>€</sub> 5</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>matcha</span>, <span>oat milk</span>, <span>agave</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 drinks">
+              <a data-fancybox="menu" data-no-swup href="img/menu/15.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/15.jpg" alt="product"></div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Spiced Chai</h4>
+                  <div class="sb-price"><sub>€</sub> 4</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>black tea</span>, <span>cardamom</span>, <span>ginger</span>,
+                    <span>cinnamon</span>, <span>oat milk</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 desserts">
+              <a data-fancybox="menu" data-no-swup href="img/menu/8.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame">
+                  <img src="img/menu/8.jpg" alt="product">
+                  <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Vegan</div>
+                </div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Coconut Chia Pudding</h4>
+                  <div class="sb-price"><sub>€</sub> 7</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>chia seeds</span>, <span>coconut milk</span>, <span>mango</span>,
+                    <span>passionfruit</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 desserts">
+              <a data-fancybox="menu" data-no-swup href="img/menu/11.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/11.jpg" alt="product"></div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Cardamom Brownie</h4>
+                  <div class="sb-price"><sub>€</sub> 4</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>dark chocolate</span>, <span>cardamom</span>, <span>walnuts</span>.
+                  </p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li class="sb-empty"><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="sb-grid-item sb-item-33 desserts">
+              <a data-fancybox="menu" data-no-swup href="img/menu/12.jpg" class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/12.jpg" alt="product"></div>
+                <div class="sb-card-tp">
+                  <h4 class="sb-card-title">Mango Kulfi</h4>
+                  <div class="sb-price"><sub>€</sub> 6</div>
+                </div>
+                <div class="sb-description">
+                  <p class="sb-text sb-mb-15"><span>mango</span>, <span>condensed milk</span>, <span>cardamom</span>,
+                    <span>pistachio</span>.</p>
+                  <ul class="sb-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- menu end -->
+
+      <!-- cta -->
+      <section class="sb-call-to-action">
+        <div class="sb-bg-3"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="sb-cta-text">
+                <h2 class="sb-h1 sb-mb-15">Reserve your table.</h2>
+                <p class="sb-text sb-mb-30">Coming in? We'd love to have everything ready for you. Book a table in just
+                  a few clicks.</p>
+                <a href="reservation.html" class="sb-btn">
+                  <span class="sb-icon"><img src="img/ui/icons/arrow.svg" alt="icon"></span>
+                  <span>Make a Reservation</span>
+                </a>
+                <a href="contact.html" class="sb-btn sb-btn-2 sb-btn-gray">
+                  <span class="sb-icon"><img src="img/ui/icons/search.svg" alt="icon"></span>
+                  <span>Contact Us</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="sb-illustration-8">
+                <img src="img/illustrations/reservation.png" alt="reserve" class="sb-reserved">
+                <div class="sb-cirkle-1"></div>
+                <div class="sb-cirkle-2"></div>
+                <div class="sb-cirkle-3"></div>
+                <div class="sb-cirkle-4"></div>
+                <div class="sb-cirkle-5"></div>
+                <img src="img/illustrations/2.svg" alt="decor" class="sb-pik-2">
+                <img src="img/illustrations/3.svg" alt="decor" class="sb-pik-3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="sb-footer-frame">
+            <a href="index.html" class="sb-logo-frame"><img src="img/ui/logo.png" alt="Toasty Turtle Cafe"></a>
+            <ul class="sb-social">
+              <li><a href="#." data-no-swup><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#." data-no-swup><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#." data-no-swup><i class="fab fa-tiktok"></i></a></li>
+            </ul>
+            <div class="sb-copy">&copy; 2024 Toasty Turtle Cafe. All Rights Reserved.</div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <div id="tt-cookie-banner" class="tt-cookie-banner">
+      <div class="tt-cookie-content">
+        <p>We use cookies to improve your experience on our website. By continuing to browse, you agree to our use of
+          cookies in accordance with EU cookie law. <a href="faq.html">Learn more</a>.</p>
+        <div class="tt-cookie-actions">
+          <button id="tt-accept-cookies" class="sb-btn"><span>Accept</span></button>
+          <button id="tt-decline-cookies" class="sb-btn sb-btn-2 sb-btn-gray"><span>Decline</span></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/plugins/jquery.min.js"></script>
+  <script src="js/plugins/smooth-scroll.js"></script>
+  <script src="js/plugins/swup.min.js"></script>
+  <script src="js/plugins/swiper.min.js"></script>
+  <script src="js/plugins/datepicker.js"></script>
+  <script src="js/plugins/isotope.js"></script>
+  <script src="js/plugins/sticky.js"></script>
+  <script src="js/plugins/mapbox.min.js"></script>
+  <script src="js/plugins/fancybox.min.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

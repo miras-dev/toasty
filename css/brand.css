@@ -1,0 +1,92 @@
+/* ============================================================
+   Toasty Turtle Cafe — Brand Overrides & Cookie Banner
+   ============================================================ */
+
+/* Primary button text — white on green background */
+.sb-btn span {
+  color: #ffffff;
+}
+
+/* Price badge — white text on green background */
+.sb-menu-item .sb-card-tp .sb-price {
+  color: #ffffff;
+}
+
+/* Primary button icons — white */
+.sb-btn .sb-icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* Reset for transparent and light-bg button variants */
+.sb-btn.sb-btn-2 span,
+.sb-btn.sb-btn-gray span {
+  color: #08510a;
+}
+
+/* Reset icons for light-bg variants */
+.sb-btn.sb-btn-gray .sb-icon img,
+.sb-btn.sb-btn-2.sb-btn-gray .sb-icon img {
+  filter: none;
+}
+
+/* Cookie consent banner */
+.tt-cookie-banner {
+  position: fixed;
+  bottom: -120px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 3px solid #08510a;
+  padding: 20px 30px;
+  z-index: 9999;
+  transition: bottom 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tt-cookie-banner.tt-visible {
+  bottom: 0;
+}
+
+.tt-cookie-content {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tt-cookie-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  flex: 1;
+  min-width: 200px;
+  color: #555;
+}
+
+.tt-cookie-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+  .tt-cookie-banner {
+    padding: 16px;
+  }
+  .tt-cookie-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tt-cookie-actions {
+    width: 100%;
+  }
+  .tt-cookie-actions .sb-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
