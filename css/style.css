@@ -629,6 +629,7 @@ breadcrumbs
   white-space: nowrap;
   display: flex;
   letter-spacing: 0;
+  color: #ffffff;
 }
 
 .sb-breadcrumbs li:after {
@@ -647,6 +648,7 @@ breadcrumbs
 .sb-breadcrumbs li a {
   padding: 0 10px;
   opacity: 0.4;
+  color: #ffffff;
   transition: 0.3s ease-in-out;
 }
 
@@ -2225,15 +2227,30 @@ menu
   height: 60px;
   font-weight: 500;
   background-color: #0d6b11;
-  font-size: 24px;
+  color: #ffffff;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 8px;
 }
 
 .sb-menu-item .sb-card-tp .sb-price sub {
   font-size: 12px;
   font-weight: 400;
+}
+
+.sb-menu-item .sb-card-tp .sb-bestseller {
+  background-color: #0d6b11;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 14px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
 }
 
 .sb-menu-item .sb-card-buttons-frame {
@@ -3052,7 +3069,7 @@ filter
 
 .sb-filter .sb-filter-link.sb-active {
   background-color: #0d6b11;
-  color: #08510a;
+  color: #ffffff;
 }
 
 .sb-filter .sb-filter-link:hover {
@@ -5055,11 +5072,19 @@ illustration 8
 
 .sb-illustration-8 .sb-reserved {
   position: absolute;
-  width: 140%;
-  height: 130%;
+  width: 80%;
+  height: auto;
   object-fit: cover;
-  top: 0;
+  top: 10%;
   right: 0;
+}
+
+.sb-reserved-inline {
+  display: inline-block;
+  width: 120px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 20px;
 }
 
 .sb-illustration-8 .sb-cirkle-1 {
