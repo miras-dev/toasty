@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#08510a">
-  <link rel="shortcut icon" href="img/ui/logo.ico" type="image/x-icon">
+  <link rel="icon" href="img/ui/logo.ico" sizes="any">
+  <link rel="icon" href="img/ui/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="img/ui/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="img/ui/apple-touch-icon.png">
   <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
   <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
   <link rel="stylesheet" href="css/plugins/swiper.min.css">
@@ -20,19 +23,19 @@
 
 <body>
   <div class="sb-app">
-    <div class="sb-preloader">
-      <div class="sb-preloader-bg"></div>
-      <div class="sb-preloader-body">
-        <div class="sb-loading">
-          <div class="sb-percent"><span class="sb-preloader-number" data-count="101">00</span><span>%</span></div>
-        </div>
-        <div class="sb-loading-bar">
-          <div class="sb-bar"></div>
-        </div>
+    <div class="tt-preloader" role="status" aria-live="polite" aria-label="Loading Toasty Turtle Cafe">
+      <div class="tt-logo-loader">
+        <img class="tt-logo-ghost" src="img/ui/logo.png" alt="">
+        <img class="tt-logo-fill" src="img/ui/logo.png" alt="">
       </div>
     </div>
     <div class="sb-click-effect"></div>
-    <div class="sb-load"></div>
+    <div class="tt-page-loader" aria-hidden="true">
+      <div class="tt-logo-loader">
+        <img class="tt-logo-ghost" src="img/ui/logo.png" alt="">
+        <img class="tt-logo-fill" src="img/ui/logo.png" alt="">
+      </div>
+    </div>
     <div class="sb-top-bar-frame">
       <div class="sb-top-bar-bg"></div>
       <div class="container">
@@ -53,6 +56,7 @@
                     <li><a href="reviews.html">Reviews</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="franchise.html">Franchise</a></li>
                   </ul>
                 </li>
               </ul>
@@ -127,6 +131,7 @@
                   <div class="sb-main-content">
                     <h3 class="sb-mb-30">Reservation details</h3>
                     <form id="form">
+                      <input type="hidden" name="sheet" value="Reservations">
                       <div class="row">
                         <div class="col-lg-12">
                           <div class="sb-group-input">
@@ -166,7 +171,7 @@
                   </div>
                   <div class="sb-success-result">
                     <span class="sb-suptitle sb-mb-15">You're all set</span>
-                    <h3 class="sb-mb-15">Table reserved!</h3>
+                    <h3 class="sb-mb-15">Table request sent!</h3>
                     <p class="sb-text sb-mb-30">Our team will get back to you shortly to confirm your booking. We can't wait to welcome you.</p>
                     <a href="index.html" class="sb-btn">
                       <span class="sb-icon"><img src="img/ui/icons/arrow.svg" alt="icon"></span>

@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#08510a">
-  <link rel="shortcut icon" href="img/ui/logo.ico" type="image/x-icon">
+  <link rel="icon" href="img/ui/logo.ico" sizes="any">
+  <link rel="icon" href="img/ui/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="img/ui/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="img/ui/apple-touch-icon.png">
   <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
   <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
   <link rel="stylesheet" href="css/plugins/swiper.min.css">
@@ -21,20 +24,20 @@
 <body>
   <div class="sb-app">
 
-    <div class="sb-preloader">
-      <div class="sb-preloader-bg"></div>
-      <div class="sb-preloader-body">
-        <div class="sb-loading">
-          <div class="sb-percent"><span class="sb-preloader-number" data-count="101">00</span><span>%</span></div>
-        </div>
-        <div class="sb-loading-bar">
-          <div class="sb-bar"></div>
-        </div>
+    <div class="tt-preloader" role="status" aria-live="polite" aria-label="Loading Toasty Turtle Cafe">
+      <div class="tt-logo-loader">
+        <img class="tt-logo-ghost" src="img/ui/logo.png" alt="">
+        <img class="tt-logo-fill" src="img/ui/logo.png" alt="">
       </div>
     </div>
 
     <div class="sb-click-effect"></div>
-    <div class="sb-load"></div>
+    <div class="tt-page-loader" aria-hidden="true">
+      <div class="tt-logo-loader">
+        <img class="tt-logo-ghost" src="img/ui/logo.png" alt="">
+        <img class="tt-logo-fill" src="img/ui/logo.png" alt="">
+      </div>
+    </div>
 
     <div class="sb-top-bar-frame">
       <div class="sb-top-bar-bg"></div>
@@ -58,6 +61,7 @@
                     <li><a href="reviews.html">Reviews</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="franchise.html">Franchise</a></li>
                   </ul>
                 </li>
               </ul>
@@ -169,7 +173,8 @@
                   <div class="sb-price"><sub>€</sub> 13,40</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>tomato</span>, <span>peppers</span>, <span>onion</span>, <span>egg</span>, <span>bread</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>tomato</span>, <span>peppers</span>, <span>onion</span>,
+                    <span>egg</span>, <span>bread</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -182,7 +187,8 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 brunch">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Veggie Cheese Omelette.jpeg" class="sb-menu-item sb-mb-30">
+              <a data-fancybox="menu" data-no-swup href="img/menu/Veggie Cheese Omelette.jpeg"
+                class="sb-menu-item sb-mb-30">
                 <div class="sb-cover-frame">
                   <img src="img/menu/Veggie Cheese Omelette.jpeg" alt="Veggie Cheese Omelette">
                   <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Veggie</div>
@@ -192,7 +198,8 @@
                   <div class="sb-price"><sub>€</sub> 12,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>egg</span>, <span>oat milk</span>, <span>mixed vegetables</span>, <span>cheese</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>egg</span>, <span>oat milk</span>, <span>mixed vegetables</span>,
+                    <span>cheese</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -205,14 +212,17 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 brunch">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Green Power Omelette.jpeg" class="sb-menu-item sb-mb-30">
-                <div class="sb-cover-frame"><img src="img/menu/Green Power Omelette.jpeg" alt="Green Power Omelette"></div>
+              <a data-fancybox="menu" data-no-swup href="img/menu/Green Power Omelette.jpeg"
+                class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/Green Power Omelette.jpeg" alt="Green Power Omelette">
+                </div>
                 <div class="sb-card-tp">
                   <h4 class="sb-card-title">Green Power Omelette</h4>
                   <div class="sb-price"><sub>€</sub> 12,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>egg</span>, <span>spinach</span>, <span>avocado</span>, <span>dried tomato</span>, <span>cheese</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>egg</span>, <span>spinach</span>, <span>avocado</span>, <span>dried
+                      tomato</span>, <span>cheese</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -225,14 +235,16 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 brunch">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Farmer's Favourite.jpeg" class="sb-menu-item sb-mb-30">
-                <div class="sb-cover-frame"><img src="img/menu/Farmer's Favourite.jpeg" alt="Farmer's Favourite"></div>
+              <a data-fancybox="menu" data-no-swup href="img/menu/Farmer’s Favourite.jpeg"
+                class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/Farmer’s Favourite.jpeg" alt="Farmer's Favourite"></div>
                 <div class="sb-card-tp">
                   <h4 class="sb-card-title">Farmer's Favourite</h4>
                   <div class="sb-price"><sub>€</sub> 13,40</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>fried egg</span>, <span>fried potatoes</span>, <span>bacon</span>, <span>bread</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>fried egg</span>, <span>fried potatoes</span>, <span>bacon</span>,
+                    <span>bread</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -245,14 +257,17 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 brunch">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Avocado Bread With Egg.jpeg" class="sb-menu-item sb-mb-30">
-                <div class="sb-cover-frame"><img src="img/menu/Avocado Bread With Egg.jpeg" alt="Avocado Toast With Egg"></div>
+              <a data-fancybox="menu" data-no-swup href="img/menu/Avocado Bread With Egg.jpeg"
+                class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/Avocado Bread With Egg.jpeg"
+                    alt="Avocado Toast With Egg"></div>
                 <div class="sb-card-tp">
                   <h4 class="sb-card-title">Avocado Toast With Egg</h4>
                   <div class="sb-price"><sub>€</sub> 11,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>sourdough</span>, <span>avocado guacamole</span>, <span>egg</span>, <span>salad</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>sourdough</span>, <span>avocado guacamole</span>, <span>egg</span>,
+                    <span>salad</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -296,7 +311,8 @@
                   <div class="sb-price"><sub>€</sub> 8,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>chicken</span>, <span>pesto sauce</span>, <span>coleslaw</span>, <span>cheddar</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>chicken</span>, <span>pesto sauce</span>, <span>coleslaw</span>,
+                    <span>cheddar</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -316,7 +332,8 @@
                   <div class="sb-price"><sub>€</sub> 9,40</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>beef</span>, <span>pesto sauce</span>, <span>coleslaw</span>, <span>cheddar</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>beef</span>, <span>pesto sauce</span>, <span>coleslaw</span>,
+                    <span>cheddar</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -336,7 +353,8 @@
                   <div class="sb-price"><sub>€</sub> 9,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>salmon</span>, <span>pesto sauce</span>, <span>coleslaw</span>, <span>cheddar</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>salmon</span>, <span>pesto sauce</span>, <span>coleslaw</span>,
+                    <span>cheddar</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -357,7 +375,8 @@
                   <div class="sb-price"><sub>€</sub> 12,40</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>chicken</span>, <span>salat</span>, <span>carrot</span>, <span>cabbage</span>, <span>yogurt sauce</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>chicken</span>, <span>salat</span>, <span>carrot</span>,
+                    <span>cabbage</span>, <span>yogurt sauce</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -377,7 +396,8 @@
                   <div class="sb-price"><sub>€</sub> 12,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>beef</span>, <span>salat</span>, <span>carrot</span>, <span>cabbage</span>, <span>yogurt sauce</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>beef</span>, <span>salat</span>, <span>carrot</span>,
+                    <span>cabbage</span>, <span>yogurt sauce</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -400,7 +420,8 @@
                   <div class="sb-price"><sub>€</sub> 11,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>halloumi</span>, <span>salat</span>, <span>carrot</span>, <span>cabbage</span>, <span>yogurt sauce</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>halloumi</span>, <span>salat</span>, <span>carrot</span>,
+                    <span>cabbage</span>, <span>yogurt sauce</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -424,7 +445,8 @@
                   <div class="sb-price"><sub>€</sub> 12,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>falafel</span>, <span>fried vegetables</span>, <span>greens</span>, <span>pomegranate</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>falafel</span>, <span>fried vegetables</span>, <span>greens</span>,
+                    <span>pomegranate</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -437,7 +459,8 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 healthy-bowls">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Curry Chickpeas Bowl.jpeg" class="sb-menu-item sb-mb-30">
+              <a data-fancybox="menu" data-no-swup href="img/menu/Curry Chickpeas Bowl.jpeg"
+                class="sb-menu-item sb-mb-30">
                 <div class="sb-cover-frame">
                   <img src="img/menu/Curry Chickpeas Bowl.jpeg" alt="Curry Chickpea Bowl">
                   <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Vegan</div>
@@ -447,7 +470,8 @@
                   <div class="sb-price"><sub>€</sub> 12,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>chickpea</span>, <span>curry</span>, <span>beetroot</span>, <span>avocado</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>chickpea</span>, <span>curry</span>, <span>beetroot</span>,
+                    <span>avocado</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -460,14 +484,16 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 healthy-bowls">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Chicken Basic Bowl.jpeg" class="sb-menu-item sb-mb-30">
+              <a data-fancybox="menu" data-no-swup href="img/menu/Chicken Basic Bowl.jpeg"
+                class="sb-menu-item sb-mb-30">
                 <div class="sb-cover-frame"><img src="img/menu/Chicken Basic Bowl.jpeg" alt="Chicken Basic Bowl"></div>
                 <div class="sb-card-tp">
                   <h4 class="sb-card-title">Chicken Basic Bowl</h4>
                   <div class="sb-price"><sub>€</sub> 13,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>grilled chicken</span>, <span>edamame</span>, <span>avocado</span>, <span>greens</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>grilled chicken</span>, <span>edamame</span>, <span>avocado</span>,
+                    <span>greens</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -480,14 +506,17 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 healthy-bowls">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Chicken Teriyaki Bowl.jpeg" class="sb-menu-item sb-mb-30">
-                <div class="sb-cover-frame"><img src="img/menu/Chicken Teriyaki Bowl.jpeg" alt="Chicken Teriyaki Bowl"></div>
+              <a data-fancybox="menu" data-no-swup href="img/menu/Chicken Teriyaki Bowl.jpeg"
+                class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/Chicken Teriyaki Bowl.jpeg" alt="Chicken Teriyaki Bowl">
+                </div>
                 <div class="sb-card-tp">
                   <h4 class="sb-card-title">Chicken Teriyaki Bowl</h4>
                   <div class="sb-price"><sub>€</sub> 14,40</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>grilled chicken</span>, <span>edamame</span>, <span>avocado</span>, <span>greens</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>grilled chicken</span>, <span>edamame</span>, <span>avocado</span>,
+                    <span>greens</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -507,7 +536,8 @@
                   <div class="sb-price"><sub>€</sub> 15,40</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>crunchy beef</span>, <span>fried vegetables</span>, <span>onion</span>, <span>cabbage</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>crunchy beef</span>, <span>fried vegetables</span>,
+                    <span>onion</span>, <span>cabbage</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -520,14 +550,16 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 healthy-bowls">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Teriyaki Beef Bowl.jpeg" class="sb-menu-item sb-mb-30">
+              <a data-fancybox="menu" data-no-swup href="img/menu/Teriyaki Beef Bowl.jpeg"
+                class="sb-menu-item sb-mb-30">
                 <div class="sb-cover-frame"><img src="img/menu/Teriyaki Beef Bowl.jpeg" alt="Beef Teriyaki Bowl"></div>
                 <div class="sb-card-tp">
                   <h4 class="sb-card-title">Beef Teriyaki Bowl</h4>
                   <div class="sb-price"><sub>€</sub> 15,40</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>grilled beef</span>, <span>avocado</span>, <span>fried vegetables</span>, <span>greens</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>grilled beef</span>, <span>avocado</span>, <span>fried
+                      vegetables</span>, <span>greens</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -540,14 +572,17 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 healthy-bowls">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Salmon Teriyaki Bowl.jpeg" class="sb-menu-item sb-mb-30">
-                <div class="sb-cover-frame"><img src="img/menu/Salmon Teriyaki Bowl.jpeg" alt="Salmon Teriyaki Bowl"></div>
+              <a data-fancybox="menu" data-no-swup href="img/menu/Salmon Teriyaki Bowl.jpeg"
+                class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/Salmon Teriyaki Bowl.jpeg" alt="Salmon Teriyaki Bowl">
+                </div>
                 <div class="sb-card-tp">
                   <h4 class="sb-card-title">Salmon Teriyaki Bowl</h4>
                   <div class="sb-price"><sub>€</sub> 15,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>grilled salmon</span>, <span>edamame</span>, <span>avocado</span>, <span>greens</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>grilled salmon</span>, <span>edamame</span>, <span>avocado</span>,
+                    <span>greens</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -560,7 +595,8 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 healthy-bowls">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Grilled Halloumi Cheese & Avocado Bowl.jpeg" class="sb-menu-item sb-mb-30">
+              <a data-fancybox="menu" data-no-swup href="img/menu/Grilled Halloumi Cheese & Avocado Bowl.jpeg"
+                class="sb-menu-item sb-mb-30">
                 <div class="sb-cover-frame">
                   <img src="img/menu/Grilled Halloumi Cheese & Avocado Bowl.jpeg" alt="Grilled Cheese Bowl">
                   <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Veggie</div>
@@ -570,7 +606,8 @@
                   <div class="sb-price"><sub>€</sub> 12,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>halloumi</span>, <span>grilled vegetables</span>, <span>avocado</span>, <span>greens</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>halloumi</span>, <span>grilled vegetables</span>,
+                    <span>avocado</span>, <span>greens</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -591,7 +628,8 @@
                   <div class="sb-price"><sub>€</sub> 12,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>tuna</span>, <span>avocado</span>, <span>edamame</span>, <span>cabbage</span>, <span>broccoli</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>tuna</span>, <span>avocado</span>, <span>edamame</span>,
+                    <span>cabbage</span>, <span>broccoli</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -614,7 +652,8 @@
                   <div class="sb-price"><sub>€</sub> 12,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>falafel</span>, <span>avocado</span>, <span>edamame</span>, <span>cabbage</span>, <span>broccoli</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>falafel</span>, <span>avocado</span>, <span>edamame</span>,
+                    <span>cabbage</span>, <span>broccoli</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -634,7 +673,8 @@
                   <div class="sb-price"><sub>€</sub> 13,40</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>chicken</span>, <span>avocado</span>, <span>edamame</span>, <span>cabbage</span>, <span>broccoli</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>chicken</span>, <span>avocado</span>, <span>edamame</span>,
+                    <span>cabbage</span>, <span>broccoli</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -647,7 +687,8 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 healthy-bowls">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Grilled Halloumi Cheese & Avocado Salad.jpeg" class="sb-menu-item sb-mb-30">
+              <a data-fancybox="menu" data-no-swup href="img/menu/Grilled Halloumi Cheese & Avocado Salad.jpeg"
+                class="sb-menu-item sb-mb-30">
                 <div class="sb-cover-frame">
                   <img src="img/menu/Grilled Halloumi Cheese & Avocado Salad.jpeg" alt="Grilled Cheese Salad">
                   <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Veggie</div>
@@ -657,7 +698,8 @@
                   <div class="sb-price"><sub>€</sub> 12,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>halloumi</span>, <span>avocado</span>, <span>edamame</span>, <span>cabbage</span>, <span>broccoli</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>halloumi</span>, <span>avocado</span>, <span>edamame</span>,
+                    <span>cabbage</span>, <span>broccoli</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -681,7 +723,8 @@
                   <div class="sb-price"><sub>€</sub> 6,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>strawberry</span>, <span>banana</span>, <span>yoghurt</span>, <span>orange</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>strawberry</span>, <span>banana</span>, <span>yoghurt</span>,
+                    <span>orange</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -704,7 +747,8 @@
                   <div class="sb-price"><sub>€</sub> 6,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>almond milk</span>, <span>strawberry</span>, <span>banana</span>, <span>chia</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>almond milk</span>, <span>strawberry</span>, <span>banana</span>,
+                    <span>chia</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -727,7 +771,8 @@
                   <div class="sb-price"><sub>€</sub> 6,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>mixed berries</span>, <span>banana</span>, <span>yoghurt</span>, <span>orange</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>mixed berries</span>, <span>banana</span>, <span>yoghurt</span>,
+                    <span>orange</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -750,7 +795,8 @@
                   <div class="sb-price"><sub>€</sub> 6,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>almond milk</span>, <span>banana</span>, <span>blueberry</span>, <span>blue spirulina</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>almond milk</span>, <span>banana</span>, <span>blueberry</span>,
+                    <span>blue spirulina</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -773,7 +819,8 @@
                   <div class="sb-price"><sub>€</sub> 6,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>mango</span>, <span>banana</span>, <span>coconut milk</span>, <span>mint</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>mango</span>, <span>banana</span>, <span>coconut milk</span>,
+                    <span>mint</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -796,7 +843,8 @@
                   <div class="sb-price"><sub>€</sub> 6,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>almond milk</span>, <span>banana</span>, <span>spinach</span>, <span>green spirulina</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>almond milk</span>, <span>banana</span>, <span>spinach</span>,
+                    <span>green spirulina</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -819,7 +867,8 @@
                   <div class="sb-price"><sub>€</sub> 6,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>oat milk</span>, <span>dates</span>, <span>banana</span>, <span>chocolate</span>, <span>coffee</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>oat milk</span>, <span>dates</span>, <span>banana</span>,
+                    <span>chocolate</span>, <span>coffee</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -842,7 +891,8 @@
                   <div class="sb-price"><sub>€</sub> 6,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>acai</span>, <span>banana</span>, <span>coconut milk</span>, <span>chia</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>acai</span>, <span>banana</span>, <span>coconut milk</span>,
+                    <span>chia</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -865,7 +915,8 @@
                   <div class="sb-price"><sub>€</sub> 6,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>peanut butter</span>, <span>oats</span>, <span>banana</span>, <span>dates</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>peanut butter</span>, <span>oats</span>, <span>banana</span>,
+                    <span>dates</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -879,7 +930,8 @@
 
             <!-- FRESH JUICES -->
             <div class="sb-grid-item sb-item-33 drinks">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Fresh Orange Juice.jpeg" class="sb-menu-item sb-mb-30">
+              <a data-fancybox="menu" data-no-swup href="img/menu/Fresh Orange Juice.jpeg"
+                class="sb-menu-item sb-mb-30">
                 <div class="sb-cover-frame">
                   <img src="img/menu/Fresh Orange Juice.jpeg" alt="Fresh Orange Juice">
                   <div class="sb-badge sb-vegan"><i class="fas fa-leaf"></i> Vegan</div>
@@ -958,7 +1010,8 @@
                   <div class="sb-price"><sub>€</sub> 5,90</div>
                 </div>
                 <div class="sb-description">
-                  <p class="sb-text sb-mb-15"><span>beetroot</span>, <span>carrot</span>, <span>ginger</span>, <span>orange</span>.</p>
+                  <p class="sb-text sb-mb-15"><span>beetroot</span>, <span>carrot</span>, <span>ginger</span>,
+                    <span>orange</span>.</p>
                   <ul class="sb-stars">
                     <li><i class="fas fa-star"></i></li>
                     <li><i class="fas fa-star"></i></li>
@@ -1124,8 +1177,10 @@
             </div>
 
             <div class="sb-grid-item sb-item-33 sweet-bites">
-              <a data-fancybox="menu" data-no-swup href="img/menu/Blueberry Lemon Cake.jpeg" class="sb-menu-item sb-mb-30">
-                <div class="sb-cover-frame"><img src="img/menu/Blueberry Lemon Cake.jpeg" alt="Blueberry Lemon Cake"></div>
+              <a data-fancybox="menu" data-no-swup href="img/menu/Blueberry Lemon Cake.jpeg"
+                class="sb-menu-item sb-mb-30">
+                <div class="sb-cover-frame"><img src="img/menu/Blueberry Lemon Cake.jpeg" alt="Blueberry Lemon Cake">
+                </div>
                 <div class="sb-card-tp">
                   <h4 class="sb-card-title">Blueberry Lemon Cake</h4>
                   <div class="sb-price"><sub>€</sub> 5,50</div>

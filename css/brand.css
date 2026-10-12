@@ -90,3 +90,293 @@
     justify-content: center;
   }
 }
+
+/* ============================================================
+   Motion tokens (Apple-style fluid interface)
+   Critically damped curves: fast response, no overshoot.
+   ============================================================ */
+:root {
+  --tt-green: #08510a;
+  --tt-cream: #f8f8ec;
+  --tt-ease-out: cubic-bezier(0.32, 0.72, 0, 1);   /* spring-like, damping ~1.0 */
+  --tt-ease-in: cubic-bezier(0.72, 0, 1, 0.32);    /* mirrored curve for exits */
+  --tt-press: 100ms;
+  --tt-response: 400ms;
+}
+
+/* ============================================================
+   Logo loader — the wordmark "toasts" from the bottom up
+   ============================================================ */
+.tt-logo-loader {
+  --tt-p: 0;                       /* fill progress 0 → 1 */
+  position: relative;
+  width: min(340px, 72vw);
+  aspect-ratio: 1414 / 729;        /* tight crop around the lettering in logo.png */
+  overflow: hidden;
+}
+
+.tt-logo-loader img {
+  position: absolute;
+  /* logo.png is 1920×1080 with padding; position it so only the letters show */
+  width: 135.8%;
+  max-width: none;
+  left: -18.6%;
+  top: -24.55%;
+  user-select: none;
+  pointer-events: none;
+}
+
+.tt-logo-loader .tt-logo-ghost {
+  opacity: 0.12;
+}
+
+/* Letters span 16.5%–84.5% of the image height; reveal that band bottom → top */
+.tt-logo-loader .tt-logo-fill {
+  clip-path: inset(calc(84.5% - var(--tt-p) * 68%) 0 0 0);
+  will-change: clip-path;
+}
+
+/* First-load preloader */
+.tt-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tt-cream);
+  transition: opacity 500ms var(--tt-ease-out), visibility 0s linear 0s;
+}
+
+.tt-preloader .tt-logo-loader {
+  transition: transform 600ms var(--tt-ease-out), filter 600ms var(--tt-ease-out), opacity 400ms var(--tt-ease-out);
+}
+
+/* Exit: the logo de-materializes (scale + blur together), surface fades */
+.tt-preloader.tt-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms var(--tt-ease-out) 120ms, visibility 0s linear 620ms;
+}
+
+.tt-preloader.tt-hidden .tt-logo-loader {
+  transform: scale(1.08);
+  filter: blur(8px);
+  opacity: 0;
+}
+
+/* Page-to-page loader (swup) — a translucent material over the content,
+   the top bar stays visible above it so people always know where they are */
+.tt-page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(248, 248, 236, 0.9);
+  backdrop-filter: blur(0px) saturate(140%);
+  -webkit-backdrop-filter: blur(0px) saturate(140%);
+  transition: opacity 350ms var(--tt-ease-out), backdrop-filter 350ms var(--tt-ease-out), -webkit-backdrop-filter 350ms var(--tt-ease-out);
+}
+
+.tt-page-loader .tt-logo-loader {
+  width: min(220px, 55vw);
+  transform: scale(0.94);
+  transition: transform 450ms var(--tt-ease-out);
+}
+
+html.is-animating .tt-page-loader {
+  opacity: 1;
+  pointer-events: all;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+html.is-animating .tt-page-loader .tt-logo-loader {
+  transform: scale(1);
+}
+
+html.is-animating .tt-page-loader .tt-logo-fill {
+  animation: tt-toast 1.3s var(--tt-ease-out) infinite;
+}
+
+/* Fill rises, then drains upward so the loop never jumps */
+@keyframes tt-toast {
+  0%   { clip-path: inset(84.5% 0 0 0); }
+  55%  { clip-path: inset(16.5% 0 0 0); }
+  100% { clip-path: inset(16.5% 0 84.5% 0); }
+}
+
+/* Shorter content fade = less waiting between pages */
+.sb-transition-fade {
+  transition: opacity 350ms var(--tt-ease-out);
+}
+
+/* ============================================================
+   Response — feedback on press, instantly
+   ============================================================ */
+a,
+button,
+.sb-btn,
+input,
+label {
+  touch-action: manipulation;      /* no double-tap-zoom delay */
+}
+
+.sb-btn {
+  transition: transform var(--tt-response) var(--tt-ease-out),
+              background-color 200ms var(--tt-ease-out),
+              box-shadow 200ms var(--tt-ease-out);
+}
+
+.sb-btn:active,
+.sb-atc:active,
+.sb-menu-btn:active,
+.sb-info-btn:active,
+.sb-btn-cart:active,
+.sb-add:active,
+.sb-sub:active,
+.sb-filter a:active {
+  transform: scale(0.97);
+  transition: transform var(--tt-press) ease-out;
+}
+
+.sb-logo-frame:active {
+  transform: scale(0.97);
+  transition-duration: var(--tt-press);
+}
+
+/* ============================================================
+   Materials — translucent top bar, content scrolls beneath
+   ============================================================ */
+.sb-top-bar-frame .sb-top-bar-bg {
+  background-color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Scroll edge effect instead of a hard divider */
+.sb-top-bar-frame {
+  border-bottom-color: transparent;
+}
+
+.sb-top-bar-frame.sb-scroll {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 8px 24px -12px rgba(0, 0, 0, 0.12);
+}
+
+.sb-top-bar-frame .sb-top-bar,
+.sb-top-bar-frame .sb-top-bar .sb-logo-frame {
+  transition: height var(--tt-response) var(--tt-ease-out), width var(--tt-response) var(--tt-ease-out), transform var(--tt-response) var(--tt-ease-out);
+}
+
+/* Dropdowns grow out of their trigger, not from nowhere */
+.sb-navigation li ul {
+  transform-origin: top center;
+}
+
+/* Cookie banner — enters and exits along the same path, on the compositor */
+.tt-cookie-banner {
+  bottom: 0;
+  transform: translateY(calc(100% + 8px));
+  transition: transform 500ms var(--tt-ease-out);
+}
+
+.tt-cookie-banner.tt-visible {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Typography — size-specific tracking & leading
+   ============================================================ */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .sb-h1 { letter-spacing: -0.035em; line-height: 1.02; }
+h2, .sb-h2 { letter-spacing: -0.03em;  line-height: 1.1; }
+h3, .sb-h3 { letter-spacing: -0.015em; line-height: 1.2; }
+p           { letter-spacing: 0.005em; }
+
+/* ============================================================
+   Accessibility — reduced motion / transparency / more contrast
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  /* Cross-fades instead of motion */
+  .tt-preloader.tt-hidden .tt-logo-loader,
+  html.is-animating .tt-page-loader .tt-logo-loader,
+  .tt-page-loader .tt-logo-loader {
+    transform: none;
+    filter: none;
+  }
+
+  .tt-logo-loader .tt-logo-fill {
+    clip-path: none;
+    opacity: calc(0.25 + var(--tt-p) * 0.75);
+  }
+
+  html.is-animating .tt-page-loader .tt-logo-fill {
+    animation: none;
+    clip-path: none;
+    opacity: 1;
+  }
+
+  .sb-btn:active,
+  .sb-atc:active,
+  .sb-logo-frame:active {
+    transform: none;
+    opacity: 0.8;
+  }
+
+  .tt-cookie-banner {
+    transform: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+  }
+
+  .tt-cookie-banner.tt-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sb-click-effect {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .sb-top-bar-frame .sb-top-bar-bg {
+    background-color: #ffffff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .tt-page-loader,
+  html.is-animating .tt-page-loader {
+    background-color: var(--tt-cream);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .sb-top-bar-frame .sb-top-bar-bg {
+    background-color: #ffffff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .sb-top-bar-frame {
+    border-bottom: 1px solid var(--tt-green);
+  }
+
+  .tt-logo-loader .tt-logo-ghost {
+    opacity: 0.3;
+  }
+}

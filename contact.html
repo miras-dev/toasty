@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#08510a">
-  <link rel="shortcut icon" href="img/ui/logo.ico" type="image/x-icon">
+  <link rel="icon" href="img/ui/logo.ico" sizes="any">
+  <link rel="icon" href="img/ui/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="img/ui/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="img/ui/apple-touch-icon.png">
   <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
   <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
   <link rel="stylesheet" href="css/plugins/swiper.min.css">
@@ -20,19 +23,19 @@
 
 <body>
   <div class="sb-app">
-    <div class="sb-preloader">
-      <div class="sb-preloader-bg"></div>
-      <div class="sb-preloader-body">
-        <div class="sb-loading">
-          <div class="sb-percent"><span class="sb-preloader-number" data-count="101">00</span><span>%</span></div>
-        </div>
-        <div class="sb-loading-bar">
-          <div class="sb-bar"></div>
-        </div>
+    <div class="tt-preloader" role="status" aria-live="polite" aria-label="Loading Toasty Turtle Cafe">
+      <div class="tt-logo-loader">
+        <img class="tt-logo-ghost" src="img/ui/logo.png" alt="">
+        <img class="tt-logo-fill" src="img/ui/logo.png" alt="">
       </div>
     </div>
     <div class="sb-click-effect"></div>
-    <div class="sb-load"></div>
+    <div class="tt-page-loader" aria-hidden="true">
+      <div class="tt-logo-loader">
+        <img class="tt-logo-ghost" src="img/ui/logo.png" alt="">
+        <img class="tt-logo-fill" src="img/ui/logo.png" alt="">
+      </div>
+    </div>
     <div class="sb-top-bar-frame">
       <div class="sb-top-bar-bg"></div>
       <div class="container">
@@ -53,6 +56,7 @@
                     <li><a href="reviews.html">Reviews</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="franchise.html">Franchise</a></li>
                   </ul>
                 </li>
               </ul>
@@ -128,7 +132,8 @@
                 <div class="sb-form-content">
                   <div class="sb-main-content">
                     <h3 class="sb-mb-30">Send us a message</h3>
-                    <form id="form">
+                    <form id="contact-form">
+                      <input type="hidden" name="sheet" value="Contact">
                       <div class="sb-group-input">
                         <input type="text" name="name" required>
                         <span class="sb-bar"></span>
@@ -138,6 +143,11 @@
                         <input type="email" name="email" required>
                         <span class="sb-bar"></span>
                         <label>Email</label>
+                      </div>
+                      <div class="sb-group-input">
+                        <input type="tel" name="phone">
+                        <span class="sb-bar"></span>
+                        <label>Phone (optional)</label>
                       </div>
                       <div class="sb-group-input">
                         <textarea name="message" required></textarea>
